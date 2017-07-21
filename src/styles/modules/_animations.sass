@@ -1,0 +1,29 @@
+.anim
+
+  &--delay-3
+    animation-delay: .3s
+
+  &--fade-in
+    animation: fadein .5s forwards cubic-bezier(0.75, 0.25, 0.5, 1.5)
+    opacity: 0
+
+  &--pop
+    animation: pop .5s forwards cubic-bezier(0.75, 0.25, 0.5, 1.5) .5s
+    opacity: 0
+    transform: scale(0.5)
+
+@keyframes fadein
+  0
+    opacity: 0
+
+  100%
+    opacity: 1
+
+@keyframes pop
+  0
+    opacity: 0
+    transform: scale(0.5)
+
+  100%
+    opacity: 1
+    transform: scale(1)

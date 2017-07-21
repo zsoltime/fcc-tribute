@@ -1,0 +1,59 @@
+.hero
+  background-color: #303930
+  background-image: linear-gradient(to top, rgba(black, .2), rgba(white, .2));
+  //#333d3d
+  color: #fff
+  height: 100vh
+  overflow: hidden
+  position: relative
+  text-align: center
+
+  &__particles
+    height: 100%
+    left: 0
+    position: absolute
+    top: 0
+    transform-origin: 50% 85%
+    width: 100%
+    will-change: transform
+
+  &__image
+    border-radius: 50%
+    box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.25)
+    height: 128px
+    margin-bottom: 1rem
+    overflow: hidden
+    transform: scale(1)
+    width: 128px
+    z-index: 2
+
+    &:hover
+      transform: scale(1.1)
+
+  &__title,
+  &__subtitle
+    font-weight: 300
+    margin-bottom: .25rem
+    margin-top: 0
+
+  &__title
+    font-size: 2rem
+    letter-spacing: .05rem
+    line-height: 1
+
+    span
+      opacity: .75
+
+  &__subtitle
+    font-size: 1.2rem
+
+  &__date
+    font-size: .825rem
+    font-style: italic
+    font-weight: 300
+    margin: 0 0 1.75rem
+
+@media (min-width: 600px)
+  .hero
+    &__title
+      font-size: 2.625rem

@@ -5,4 +5,5 @@ gulp.task('build:dev', [
   'scripts',
   'styles',
   'pugToHTML',
+  'copy:images',
 ]);

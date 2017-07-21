@@ -4,6 +4,7 @@ html(lang='en')
     meta(charset='UTF-8')
     meta(name='viewport', content='width=device-width, initial-scale=1')
     block title
+    block meta
     block fonts
       link(href='https://fonts.googleapis.com/css?family=Roboto:300,400,500',
       rel='stylesheet', type='text/css')
@@ -12,11 +13,11 @@ html(lang='en')
       link(href='css/style.css', rel='stylesheet', type='text/css')
       // endbuild
     block headerScripts
-      // build:js js/vendor.js
-      script(src='js/vendor.js')
-      // endbuild
   body
     block content
+    // build:js js/vendor.js
+    script(src='js/vendor.js')
+    // endbuild
     // build:js js/main.js
     script(src='js/main.js')
     // endbuild
