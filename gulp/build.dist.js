@@ -56,7 +56,6 @@ gulp.task('usemin', ['pugToHTML', 'styles', 'scripts'], () => (
 ));
 
 gulp.task('build:dist', [
-  'sprites',
   'clean:dist',
   'copyGeneralFiles',
   'optimizeImages',
