@@ -22,9 +22,8 @@
   },
   "homepage": "https://github.com/zsoltime/fcc-tribute#readme",
   "dependencies": {
-    "normalize.css": "^7.0.0",
     "particles.js": "^2.0.0",
-    "smoothscroll-polyfill": "^0.3.5"
+    "postcss-normalize": "^4.0.0"
   },
   "devDependencies": {
     "autoprefixer": "^7.1.1",

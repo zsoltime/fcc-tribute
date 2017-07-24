@@ -4,8 +4,12 @@ const rename = require('gulp-rename');
 const sourcemaps = require('gulp-sourcemaps');
 const sass = require('gulp-sass');
 const autoprefixer = require('autoprefixer');
+const normalize = require('postcss-normalize');
 
 const postCSSPlugins = [
+  normalize({
+    forceImport: true,
+  }),
   autoprefixer,
 ];
 
