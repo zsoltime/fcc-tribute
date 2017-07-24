@@ -40,7 +40,7 @@ gulp.task('useminTrigger', ['clean:dist'], () => {
   gulp.start('usemin');
 });
 
-gulp.task('usemin', ['pugToHTML', 'styles', 'scripts'], () => (
+gulp.task('usemin', ['pugToHTML', 'styles', 'scripts:dist'], () => (
   gulp.src('./src/temp/index.html')
     .pipe(usemin({
       css: [
@@ -49,7 +49,6 @@ gulp.task('usemin', ['pugToHTML', 'styles', 'scripts'], () => (
       ],
       js: [
         () => rev(),
-        () => uglify(),
       ],
     }))
     .pipe(gulp.dest('./dist'))
