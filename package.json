@@ -4,6 +4,8 @@
   "description": "FreeCodeCamp tribute page",
   "main": "",
   "scripts": {
+    "build": "gulp build:dist",
+    "preview": "gulp preview:dist",
     "start": "gulp",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
