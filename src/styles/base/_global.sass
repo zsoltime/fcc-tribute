@@ -45,6 +45,13 @@ a
     border-color: transparentize(darken($link-color, 10%), .75)
     color: darken($link-color, 10%)
 
+  &[rel*="external"]
+    background-image: url('../images/link.svg')
+    background-position: 100% 50%
+    background-repeat: no-repeat
+    background-size: .625rem
+    padding-right: .875rem
+
 abbr
   border-bottom: 1px dotted rgba(0, 0, 0, 0.5)
   cursor: help

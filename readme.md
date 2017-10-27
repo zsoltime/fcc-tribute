@@ -2,6 +2,8 @@
 
 This is my tribute page for freeCodeCamp's first [basic front end project](https://www.freecodecamp.com/challeinges/build-a-tribute-page) dedicated to John von Neumann, one of the most important names in the history of computing. Demo is available [on my site](https://zsolti.co/fcc/tribute/).
 
+Icons made by [Freepik](http://www.freepik.com) from [flaticon.com](https://www.flaticon.com/) and licensed by [CC 3.0 BY](http://creativecommons.org/licenses/by/3.0/).
+
 ## User Stories
 
 - [x] I can view a tribute page with an image and text.
