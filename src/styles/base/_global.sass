@@ -41,9 +41,13 @@ a
   text-decoration: none
   transition: border .3s ease-in-out, color .3s ease-in-out
 
+  &:focus,
   &:hover
     border-color: transparentize(darken($link-color, 10%), .75)
     color: darken($link-color, 10%)
+
+  &:focus
+    outline: thin dotted
 
   &[rel*="external"]
     background-image: url('../images/link.svg')
