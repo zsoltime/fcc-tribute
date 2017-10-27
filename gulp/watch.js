@@ -2,7 +2,7 @@ const gulp = require('gulp');
 const watch = require('gulp-watch');
 const browserSync = require('browser-sync').create();
 
-const reload = browserSync.reload;
+const { reload } = browserSync;
 
 gulp.task('watch', ['build:dev'], () => {
   browserSync.init({

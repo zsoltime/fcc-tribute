@@ -2,7 +2,6 @@ const gulp = require('gulp');
 const cleanCSS = require('gulp-clean-css');
 const imagemin = require('gulp-imagemin');
 const usemin = require('gulp-usemin');
-const uglify = require('gulp-uglify');
 const rev = require('gulp-rev');
 
 gulp.task('copyGeneralFiles', ['clean:dist'], () => (
