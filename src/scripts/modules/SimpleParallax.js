@@ -1,22 +1,7 @@
-const SimpleParallax = function simpleParallax(selector) {
-  function remap(val, inMin, inMax, outMin, outMax) {
-    return ((
-      ((val - inMin) * (outMax - outMin)) /
-      (inMax - inMin)
-    ) + outMin);
-  }
+import { remap, objToCss } from './helpers';
 
-  function getLimit(el) {
-    return el.offsetTop + el.offsetHeight;
-  }
-
-  function objToCss(obj) {
-    return Object.keys(obj)
-      .reduce((acc, key) => {
-        acc += `${key}(${obj[key]}) `;
-        return acc;
-      }, '');
-  }
+export default function simpleParallax(selector) {
+  const getLimit = el => el.offsetTop + el.offsetHeight;
 
   function update() {
     const scrolledHeight = window.pageYOffset;
@@ -27,8 +12,9 @@ const SimpleParallax = function simpleParallax(selector) {
           translateY: 0,
           scale: 1,
         };
+        const isVisible = scrolledHeight > el.offsetTop && scrolledHeight <= getLimit(el);
 
-        if (scrolledHeight > el.offsetTop && scrolledHeight <= getLimit(el)) {
+        if (isVisible) {
           const position = (Math.round((scrolledHeight / el.offsetHeight) * 10000) / 100);
 
           transform.translateY = `${remap(position, 0, 100, 0, -25)}%`;
@@ -40,6 +26,4 @@ const SimpleParallax = function simpleParallax(selector) {
   }
 
   return { update };
-};
-
-export default SimpleParallax;
+}
