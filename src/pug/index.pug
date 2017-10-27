@@ -1,8 +1,7 @@
 extends _layout.pug
-block title
-  title John von Neumann - FCC Tribute Page
 block meta
-  meta(name='description', content='Check out my freeCodeCamp tribute page dedicated to John von Neumann, one of the most important names in the history of computing')
+  include partials/_meta-data.pug
+  include partials/_meta.pug
 block content
   include partials/_site-header.pug
   include partials/_hero.pug
